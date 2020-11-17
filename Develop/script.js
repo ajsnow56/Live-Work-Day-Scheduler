@@ -24,11 +24,11 @@ function buildTimeSlot(hour) {
   // Here a text area was created to attatch our todo's
   const $textArea = $("<textarea>").attr("class", "col-md-10 description");
 // This if else is used in conjunction with css to apply backgrounds that will colorcode the block based on time
-  if (hour < currentTime) {
+  if (hour <= currentTime) {
     $textArea.addClass("past");
   } else if(hour === currentTime){
     $textArea.addClass("present");
-  } else if(hour > currentTime) {
+  } else if(hour >= currentTime) {
     $textArea.addClass("present")
   }
   // This creates our save buttons at the end of each row
